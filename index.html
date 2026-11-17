@@ -1,146 +1,110 @@
+
 <!DOCTYPE html>
-
 <html lang="ru">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Чекер</title>
-
 <style>
-
-* { box-sizing:border-box; }
+* { box-sizing: border-box; }
 
 body {
-
-  margin:0;
-
-  background:#101827;
-
-  color:white;
-
-  font-family:Arial,sans-serif;
-
-  padding:25px;
-
+  margin: 0;
+  padding: 20px;
+  background: #0b1120;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
-main {
-
-  max-width:420px;
-
-  margin:35px auto;
-
-  background:#1e293b;
-
-  padding:25px;
-
-  border-radius:20px;
-
-  text-align:center;
-
+.container {
+  max-width: 430px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #172338;
+  border-radius: 20px;
+  text-align: center;
 }
 
-h1 { color:#38bdf8; }
+h1 {
+  color: #38bdf8;
+  font-size: 34px;
+}
 
 .device {
-
-  background:#334155;
-
-  border-radius:14px;
-
-  padding:18px;
-
-  margin:20px 0;
-
+  background: #26364e;
+  padding: 20px;
+  border-radius: 14px;
+  margin: 20px 0;
 }
 
-.status { color:#fbbf24; }
+.status {
+  color: #fbbf24;
+  font-weight: bold;
+}
 
 button {
-
-  width:100%;
-
-  padding:15px;
-
-  margin-top:12px;
-
-  border:0;
-
-  border-radius:10px;
-
-  font-size:17px;
-
-  font-weight:bold;
-
+  width: 100%;
+  padding: 16px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
 }
 
-.lock { background:#ef4444;color:white; }
+.lock { background: #dc3545; }
+.unlock { background: #16a34a; }
 
-.unlock { background:#22c55e;color:white; }
-
-.note {
-
-  color:#cbd5e1;
-
-  font-size:13px;
-
-  line-height:1.5;
-
+button:active {
+  opacity: .75;
 }
 
+small {
+  color: #aab8cc;
+  line-height: 1.6;
+}
 </style>
-
 </head>
 
 <body>
-
-<main>
+<div class="container">
 
   <h1>🔐 ЧЕКЕР</h1>
-
-  <p>Пульт управления телефонами</p>
+  <p>Удалённое управление устройством</p>
 
   <div class="device">
-
-    <h2>HONOR 9S</h2>
-
-    <p>Телефон управления</p>
-
-    <p>Режим: Пульт</p>
-
+    <h2>📱 HONOR 9S</h2>
+    <p>Пульт управления</p>
   </div>
 
   <div class="device">
+    <h2>📱 Realme C35</h2>
+    <p class="status" id="status">
+      ● Не подключён
+    </p>
 
-    <h2>Realme C35</h2>
+    <button class="lock" onclick="showMessage('Блокировка пока не подключена. Требуется Android-приложение.')">
+      🔒 Заблокировать
+    </button>
 
-    <p class="status">● Не подключён</p>
-
-    <button class="lock" disabled>Заблокировать</button>
-
-    <button class="unlock" disabled>Разблокировать</button>
-
+    <button class="unlock" onclick="showMessage('Разблокировка пока не подключена. Требуется Android-приложение.')">
+      🔓 Разблокировать
+    </button>
   </div>
 
-  <p class="note">
+  <small>
+    Чекер v1.0<br>
+    Защищённая панель управления
+  </small>
 
-    Чекер — версия 1.0<br>
+</div>
 
-    Для управления нужна установка
-
-    Android-приложения и настройка
-
-    защищённого интернет-соединения.
-
-  </p>
-
-</main>
+<script>
+function showMessage(message) {
+  alert(message);
+}
+</script>
 
 </body>
-
 </html>
-
