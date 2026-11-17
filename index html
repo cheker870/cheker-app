@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Чекер</title>
+
+<style>
+
+* { box-sizing:border-box; }
+
+body {
+
+  margin:0;
+
+  background:#101827;
+
+  color:white;
+
+  font-family:Arial,sans-serif;
+
+  padding:25px;
+
+}
+
+main {
+
+  max-width:420px;
+
+  margin:35px auto;
+
+  background:#1e293b;
+
+  padding:25px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+}
+
+h1 { color:#38bdf8; }
+
+.device {
+
+  background:#334155;
+
+  border-radius:14px;
+
+  padding:18px;
+
+  margin:20px 0;
+
+}
+
+.status { color:#fbbf24; }
+
+button {
+
+  width:100%;
+
+  padding:15px;
+
+  margin-top:12px;
+
+  border:0;
+
+  border-radius:10px;
+
+  font-size:17px;
+
+  font-weight:bold;
+
+}
+
+.lock { background:#ef4444;color:white; }
+
+.unlock { background:#22c55e;color:white; }
+
+.note {
+
+  color:#cbd5e1;
+
+  font-size:13px;
+
+  line-height:1.5;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<main>
+
+  <h1>🔐 ЧЕКЕР</h1>
+
+  <p>Пульт управления телефонами</p>
+
+  <div class="device">
+
+    <h2>HONOR 9S</h2>
+
+    <p>Телефон управления</p>
+
+    <p>Режим: Пульт</p>
+
+  </div>
+
+  <div class="device">
+
+    <h2>Realme C35</h2>
+
+    <p class="status">● Не подключён</p>
+
+    <button class="lock" disabled>Заблокировать</button>
+
+    <button class="unlock" disabled>Разблокировать</button>
+
+  </div>
+
+  <p class="note">
+
+    Чекер — версия 1.0<br>
+
+    Для управления нужна установка
+
+    Android-приложения и настройка
+
+    защищённого интернет-соединения.
+
+  </p>
+
+</main>
+
+</body>
+
+</html>
+
+Pp
